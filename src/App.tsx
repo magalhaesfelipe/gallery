@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import TrackTable from "./components/trackTable";
 
 function App() {
   const [advice, setAdvice] = useState<string>();
@@ -14,14 +15,24 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-purple-900 flex gap-y-12 flex-col  w-full h-full items-center justify-center">
-      <h1 className="text-4xl font-bold">{advice}</h1>
+    <div className="relative flex h-full w-full flex-col items-center justify-center gap-y-12 bg-emerald-700">
+      <TrackTable />
+
+      {/* <h1 className="bg-blue-700 text-5xl font-extrabold text-sky-200/15">
+        Advice generator!
+      </h1>
+      <h3 className="text-3xl font-bold text-blue-50">{advice}</h3>
+      <div className="bg-red-900 text-red-400">
+        <p> This is the first line!</p>
+        <br />
+        <p> And this is the second line!</p>
+      </div>
       <button
         onClick={getSomeAdvice}
-        className="bg-purple-700 cursor-pointer p-5 rounded-sm font-semibold text-amber-50"
+        className="cursor-pointer rounded-sm bg-purple-800 p-5 font-semibold text-amber-50 transition duration-300 hover:bg-amber-400"
       >
         get advice
-      </button>
+      </button> */}
     </div>
   );
 }
