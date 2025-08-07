@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TrackTable from "./components/trackTable";
+import TrackTable from "./components/TrackTable.tsx";
 
 function App() {
   const [advice, setAdvice] = useState<string>();
@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative flex h-full w-full flex-col items-center justify-center gap-y-12 bg-emerald-700">
+    <div className="relative flex h-full w-full flex-col items-center justify-center gap-y-12 bg-gray-950">
       <TrackTable />
 
       {/* <h1 className="bg-blue-700 text-5xl font-extrabold text-sky-200/15">
